@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -9,7 +11,7 @@
 	</parent>
 	<groupId>git.jenkins</groupId>
 	<artifactId>auto-versioning</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>auto-versioning</name>
 	<description>Test for Auto Versioning</description>
 
@@ -19,26 +21,15 @@
 
 
 
-<!-- 
-	<distributionManagement>
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://localhost:8081/nexus/content/repositories/releases</url>
-		</repository>
-	</distributionManagement> 
-
+	<!-- <distributionManagement> <repository> <id>nexus-releases</id> <url>http://localhost:8081/nexus/content/repositories/releases</url> 
+		</repository> </distributionManagement> <scm> <connection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</connection> 
+		<url>http://github.com/kharchessk/git-jenkins-demo</url> <developerConnection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</developerConnection> 
+		<tag>auto-versioning-0.0.1</tag> </scm> -->
 	<scm>
-		<connection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</connection>
-		<url>http://github.com/kharchessk/git-jenkins-demo</url>
-		<developerConnection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</developerConnection>
-	  <tag>auto-versioning-0.0.1</tag>
-  </scm>
-  -->
-  <scm>
-	<connection>scm:git:http://${kharchessk@gmail.com}:${kharcheSSK@5937}@github.com/kharchessk/git-jenkins-demo.git</connection>
-	<url>http://github.com/kharchessk/git-jenkins-demo.git</url>
-	<tag>HEAD</tag>
-</scm>
+		<connection>scm:git:http://${kharchessk@gmail.com}:${kharcheSSK@5937}@github.com/kharchessk/git-jenkins-demo.git</connection>
+		<url>http://github.com/kharchessk/git-jenkins-demo.git</url>
+		<tag>HEAD</tag>
+	</scm>
 
 
 
@@ -74,74 +65,46 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
-			
-	<plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-release-plugin</artifactId>
-      <version>2.5.1</version>
-      <dependencies>
-        <dependency>
-          <groupId>org.apache.maven.shared</groupId>
-          <artifactId>maven-invoker</artifactId>
-          <version>2.2</version>
-        </dependency>
-      </dependencies>
-      <configuration>
-         <localCheckout>true</localCheckout>
-         <pushChanges>false</pushChanges>    
-        <stagingRepository>
-          localforme::default::file://C:/Users/Swapnil/.m2/repository
-        </stagingRepository>
-      </configuration>
-    </plugin>
-			
-			
-			
-			
-		<!-- 	<plugin>
+
+
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.2</version>
+				<version>2.5.1</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.shared</groupId>
+						<artifactId>maven-invoker</artifactId>
+						<version>2.2</version>
+					</dependency>
+				</dependencies>
 				<configuration>
-					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<releaseProfiles>releases</releaseProfiles>
+					<localCheckout>true</localCheckout>
+					<pushChanges>false</pushChanges>
+					<stagingRepository>
+						localforme::default::file://C:/Users/Swapnil/.m2/repository
+					</stagingRepository>
 				</configuration>
-			</plugin> -->
-			
-			
+			</plugin>
+
+
+
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-release-plugin</artifactId> 
+				<version>2.4.2</version> <configuration> <tagNameFormat>v@{project.version}</tagNameFormat> 
+				<autoVersionSubmodules>true</autoVersionSubmodules> <releaseProfiles>releases</releaseProfiles> 
+				</configuration> </plugin> -->
+
+
 		</plugins>
 	</build>
-	
-<!-- <profiles>  
-   <profile>
-      <id>releases</id>
-      <build>
-         <plugins>
-            <plugin>
-               <groupId>org.sonatype.plugins</groupId>
-               <artifactId>nexus-staging-maven-plugin</artifactId>
-               <version>1.5.1</version>
-               <executions>
-                  <execution>
-                     <id>default-deploy</id>
-                     <phase>deploy</phase>
-                     <goals>
-                        <goal>deploy</goal>
-                     </goals>
-                  </execution>
-               </executions>
-               <configuration>
-                  <serverId>nexus-releases</serverId>
-                  <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
-                  <skipStaging>true</skipStaging>
-               </configuration>
-            </plugin>
-         </plugins>
-      </build>
-   </profile>
-</profiles> -->
-	
+
+	<!-- <profiles> <profile> <id>releases</id> <build> <plugins> <plugin> <groupId>org.sonatype.plugins</groupId> 
+		<artifactId>nexus-staging-maven-plugin</artifactId> <version>1.5.1</version> 
+		<executions> <execution> <id>default-deploy</id> <phase>deploy</phase> <goals> 
+		<goal>deploy</goal> </goals> </execution> </executions> <configuration> <serverId>nexus-releases</serverId> 
+		<nexusUrl>http://localhost:8081/nexus/</nexusUrl> <skipStaging>true</skipStaging> 
+		</configuration> </plugin> </plugins> </build> </profile> </profiles> -->
+
 
 </project>
