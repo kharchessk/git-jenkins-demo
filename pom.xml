@@ -26,13 +26,19 @@
 			<url>http://localhost:8081/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement> 
--->
+
 	<scm>
 		<connection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</connection>
 		<url>http://github.com/kharchessk/git-jenkins-demo</url>
 		<developerConnection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</developerConnection>
 	  <tag>auto-versioning-0.0.1</tag>
   </scm>
+  -->
+  <scm>
+	<connection>scm:git:http://${kharchessk@gmail.com}:${kharcheSSK@5937}@github.com/kharchessk/git-jenkins-demo.git</connection>
+	<url>http://github.com/kharchessk/git-jenkins-demo.git</url>
+	<tag>HEAD</tag>
+</scm>
 
 
 
