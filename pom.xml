@@ -41,14 +41,14 @@
 		</repository>
 	</distributionManagement>
 	 -->
-	<distributionManagement>
+	<!-- <distributionManagement>
         <repository>
             <id>internal</id>
             <name>Archiva Managed Internal Repository</name>
             <url>http://localhost:8080/repository/internal/</url>
         </repository>        
         
-    </distributionManagement>
+    </distributionManagement> -->
 
 
 	<dependencies>
