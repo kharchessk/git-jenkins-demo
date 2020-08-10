@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>git.jenkins</groupId>
 	<artifactId>auto-versioning</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>auto-versioning</name>
 	<description>Test for Auto Versioning</description>
 
@@ -26,7 +26,7 @@
 	<scm>
 		<connection>scm:git:http://${kharchessk@gmail.com}:${kharcheSSK@5937}@github.com/kharchessk/git-jenkins-demo.git</connection>
 		<url>http://github.com/kharchessk/git-jenkins-demo.git</url>
-		<tag>auto-versioning-1.0.1</tag>
+	<!-- 	<tag>auto-versioning-1.0.1</tag> -->
 	</scm>
 
 
