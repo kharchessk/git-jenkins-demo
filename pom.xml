@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -19,33 +21,34 @@
 
 
 
-	<!--  <distributionManagement>
-	<repository>
-		<id>nexus-releases</id>
-		<url>http://localhost:8081/nexus/content/repositories/releases</url>
-	</repository>
-</distributionManagement>
-	<scm>
-		<connection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</connection>
-		<url>http://github.com/kharchessk/git-jenkins-demo</url>
-		<developerConnection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</developerConnection>
-		<tag>auto-versioning-0.0.1</tag>
-	</scm -->
-	
-	
+	<!-- <distributionManagement> <repository> <id>nexus-releases</id> <url>http://localhost:8081/nexus/content/repositories/releases</url> 
+		</repository> </distributionManagement> <scm> <connection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</connection> 
+		<url>http://github.com/kharchessk/git-jenkins-demo</url> <developerConnection>scm:git:https://github.com/kharchessk/git-jenkins-demo.git</developerConnection> 
+		<tag>auto-versioning-0.0.1</tag> </scm -->
+
+
 	<scm>
 		<connection>scm:git:http://${kharchessk@gmail.com}:${kharcheSSK@5937}@github.com/kharchessk/git-jenkins-demo.git</connection>
 		<url>http://github.com/kharchessk/git-jenkins-demo.git</url>
-	<!-- 	<tag>auto-versioning-1.0.1</tag> -->
+		<!-- <tag>auto-versioning-1.0.1</tag> -->
 	</scm>
 
-<distributionManagement>
+	<!-- <distributionManagement>
 		<repository>
 			<id>github</id>
 			<name>kharchessk</name>
 			<url>https://github.com/kharchessk/Test-Repo.git</url>
 		</repository>
 	</distributionManagement>
+	 -->
+	<distributionManagement>
+        <repository>
+            <id>internal</id>
+            <name>Archiva Managed Internal Repository</name>
+            <url>http://localhost:8080/repository/internal/</url>
+        </repository>        
+        
+    </distributionManagement>
 
 
 	<dependencies>
