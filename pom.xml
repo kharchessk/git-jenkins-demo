@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>git.jenkins</groupId>
 	<artifactId>auto-versioning</artifactId>
-	<version>3.1.1-SNAPSHOT</version>
+	<version>3.1.2-SNAPSHOT</version>
 	<name>auto-versioning</name>
 	<description>Test for Auto Versioning</description>
 
@@ -33,22 +33,22 @@
 		<!-- <tag>auto-versioning-1.0.1</tag> -->
 	</scm>
 
-	<!-- <distributionManagement>
+	 <distributionManagement>
 		<repository>
 			<id>github</id>
 			<name>kharchessk</name>
 			<url>https://github.com/kharchessk/Test-Repo.git</url>
 		</repository>
 	</distributionManagement>
-	 -->
- <distributionManagement>
+	
+ <!-- <distributionManagement>
         <repository>
             <id>internal</id>
             <name>Archiva Managed Internal Repository</name>
             <url>http://localhost:8080/repository/internal/</url>
         </repository>        
         
-    </distributionManagement> 
+    </distributionManagement>  -->
 
 
 	<dependencies>
