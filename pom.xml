@@ -33,14 +33,14 @@
 		<!-- <tag>auto-versioning-1.0.1</tag> -->
 	</scm>
 
-	<!-- <distributionManagement>
+	<distributionManagement>
 		<repository>
 			<id>github</id>
 			<name>kharchessk</name>
 			<url>https://github.com/kharchessk/Test-Repo.git</url>
 		</repository>
 	</distributionManagement>
-	 -->
+	 
 	<!-- <distributionManagement>
         <repository>
             <id>internal</id>
