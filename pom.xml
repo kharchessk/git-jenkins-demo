@@ -33,22 +33,22 @@
 		<!-- <tag>auto-versioning-1.0.1</tag> -->
 	</scm>
 
-<!-- 	<distributionManagement>
+	<!-- <distributionManagement>
 		<repository>
 			<id>github</id>
 			<name>kharchessk</name>
 			<url>https://github.com/kharchessk/Test-Repo.git</url>
 		</repository>
-	</distributionManagement> -->
-	 
-	 <distributionManagement>
+	</distributionManagement>
+	 -->
+ <distributionManagement>
         <repository>
             <id>internal</id>
             <name>Archiva Managed Internal Repository</name>
             <url>http://localhost:8080/repository/internal/</url>
         </repository>        
         
-    </distributionManagement>
+    </distributionManagement> 
 
 
 	<dependencies>
